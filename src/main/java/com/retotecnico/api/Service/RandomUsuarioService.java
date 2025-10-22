@@ -16,6 +16,11 @@ public class RandomUsuarioService {
     public List<Usuario> obtenerUsuarios() {
         RestTemplate restTemplate = new RestTemplate();
         try {
+
+            String jsonResponse = restTemplate.getForObject(API_URL, String.class);
+
+            System.out.println("Respuesta JSON: " + jsonResponse);
+
             RandomUsuarioResponse response = restTemplate.getForObject(API_URL, RandomUsuarioResponse.class);
 
             if (response != null && response.getResults() != null) {

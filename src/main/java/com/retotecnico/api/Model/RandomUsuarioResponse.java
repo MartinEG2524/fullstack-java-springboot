@@ -13,12 +13,4 @@ public class RandomUsuarioResponse {
     public void setResults(List<Usuario> results) {
         this.results = results;
     }
-
-    @Override
-    public String toString() {
-        return "RandomUsuarioResponse{" +
-                "results=" + results +
-                '}';
-    }
 }
-
